@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+    <div class="card" style="margin-top:15px;">
+        <div class="card-body">
+            <h5>Here are the endpoints:</h5>
+            <div class="col-md-10">
+                <div class="list-group">
+                    <ul>
+                        <h4>Lets you view questions based on:</h4>
+                        <p style="color:blue;">Type query in the url to find the desired result</p>
+                        <li>tags</li>
+                        <li>id</li>
+                        <li>
+                            text substring match
+                            <a href="http://localhost:8000/api/v1/questions/search/?q="
+                               class="btn btn-sm">
+                                Search
+                            </a>
+                            endpoint: <a href="">http://localhost:8000/api/v1/questions/search/?q=</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <h4>Create Endpoint:</h4>
+                        <li>
+                            Lets you create a question
+                            <a href="http://localhost:8000/api/v1/questions/"
+                               class="btn btn-sm">
+                                Create
+                            </a>
+                            endpoint:
+                            <ul>
+                                <li>
+                                    Questions List Create <a href="">http://localhost:8000/api/v1/questions/</a>
+                                </li>
+                            </ul>
+                        <li>
+                            Proper validations should be made
+                        </li>
+                    </ul>
+                    <ul>
+                        <h4>Edit Endpoint:</h4>
+                        <li>
+                            Update a question
+                            <a href="http://localhost:8000/api/v1/questions/"
+                               class="btn btn-sm">
+                                Update
+                            </a>
+                            endpoint:
+                            <ul>
+                                <li>
+                                    Questions List Update Destroy<a href="">http://localhost:8000/api/v1/questions/--input
+                                    the id of question--/</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <h3>Here are all the endpoints:</h3>
+                        <li>
+                            List all the questions
+                            <a href="http://localhost:8000/api/v1/questions/">List</a>
+                            http://localhost:8000/api/v1/questions/
+                        </li>
+                        <li>
+                            Detail of single question by id (Update, Retrieve, Destroy)
+                            <a href="http://localhost:8000/api/v1/questions/1/">Update</a>
+                            http://localhost:8000/api/v1/questions/1/
+                        </li>
+                        <li>
+                            List of all the answers related to Question)
+                            <a href="http://localhost:8000/api/v1/questions/1/answers/">List</a>
+                            http://localhost:8000/api/v1/questions/1/answers/
+                        </li>
+                        <li>
+                            Detail of single answer by id (Update, Retrieve, Destroy)
+                            <a href="http://localhost:8000/api/v1/questions/1/answers/2">Update</a>
+                            http://localhost:8000/api/v1/questions/1/answers/2
+                        </li>
+                          <li>
+                            Search by Tag Name, id or substring in the question text
+                            <a href="http://localhost:8000/api/v1/questions/search/?q=">Search</a>
+                            http://localhost:8000/api/v1/questions/search/?q=
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+</body>
+</html>
