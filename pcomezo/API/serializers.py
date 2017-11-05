@@ -1,9 +1,10 @@
 from rest_framework import serializers
+from rest_framework.relations import PrimaryKeyRelatedField
 
 from . import models
 
 
-class TagSerializer(serializers.ModelSerializer):
+class TagSerializer(PrimaryKeyRelatedField, serializers.ModelSerializer):
     class Meta:
         model = models.Tags
         fields = (
@@ -26,7 +27,7 @@ class AnswerSerializer(serializers.ModelSerializer):
 class QuestionSerializer(serializers.ModelSerializer):
     answers = AnswerSerializer(source="related_question", many=True, read_only=True)
     created_by_name = serializers.ReadOnlyField(source='created_by.username')
-    tags_desc = TagSerializer(source="tags", many=True)
+    tags_desc = TagSerializer(source="tags", many=True, queryset=models.Tags.objects.all())
 
     class Meta:
         model = models.Questions
